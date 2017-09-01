@@ -69,8 +69,8 @@ except OSError as e:
 
 train_dogs_dir = os.path.join(top, "train", "dogs")
 train_cats_dir = os.path.join(top, "train", "cats")
-val_dogs_dir = os.path.join(top, "val", "dogs")
-val_cats_dir = os.path.join(top, "val", "cats")
+val_dogs_dir = os.path.join(top, "validation", "dogs")
+val_cats_dir = os.path.join(top, "validation", "cats")
 test_dogs_dir = os.path.join(top, "test", "dogs")
 test_cats_dir = os.path.join(top, "test", "cats")
 
