@@ -1,0 +1,11 @@
+*.pyc
+*~
+*.o
+*.jpg
+*.png
+images
+images/*
+data
+data/*
+*.h5
+*.hdf5
