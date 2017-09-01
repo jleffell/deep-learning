@@ -84,16 +84,16 @@ for (i, imagePath) in enumerate(imagePaths):
 
     label = imagePath.split(os.path.sep)[-1].split(".")[0]
     num = np.int0(imagePath.split(os.path.sep)[-1].split(".")[1])
-    
+
     target_dir = None
     offset = 0
 
     if label == 'dog':
-        
+
         if shuffle_data:
             num = ndogs
             ndogs += 1
-        
+
         if num < train_num:
             target_dir = train_dogs_dir
         elif train_num <= num < train_num + val_num:
@@ -108,7 +108,7 @@ for (i, imagePath) in enumerate(imagePaths):
         if shuffle_data:
             num = ncats
             ncats += 1
-        
+
         if num < train_num:
             target_dir = train_cats_dir
         elif train_num <= num < train_num + val_num:
@@ -126,8 +126,8 @@ for (i, imagePath) in enumerate(imagePaths):
                            + str(num - offset).zfill(nzfill) + ".jpg")
         src = os.path.join(cwd, imagePath)
         os.symlink(src, dst)
-        
+
         # Check to see if we have filled the requested amount of data
-        if ndata == 2*ntot:
+        if ndata == 2 * ntot:
             print "All requested data have been assigned"
             break
