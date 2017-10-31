@@ -3,6 +3,7 @@
 *.o
 *.jpg
 *.png
+*.zip
 images
 images/*
 data
